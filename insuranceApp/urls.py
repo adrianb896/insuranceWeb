@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from insuranceWeb import views
-#from ..insuranceWeb import views
+from insuranceApp import views
+#from insuranceWeb import views
 #import views
 from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("insuranceWeb/", include("insuranceWeb.urls")),
+    path("insuranceApp/", include("insuranceApp.urls")),
 ]
 
 urlpatterns = [

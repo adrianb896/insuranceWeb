@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = "django-insecure-1$*ndg_@zt9x7pbe1k)+73_4blvgry*d7&5-ph!7h0vbelh(9t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "35.86.110.192"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,8 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "insuranceApp",
-    "insuranceWeb"  # add the app containing the Product model
+    "insuranceWeb",
+    "insuranceApp" # add the app containing the Product model
 ]
 
 
@@ -79,7 +80,7 @@ WSGI_APPLICATION = "insuranceWeb.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
