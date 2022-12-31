@@ -1,2 +1,2 @@
 # insuranceWeb
- testing Django
+trying out Django
